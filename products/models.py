@@ -3,7 +3,7 @@ from django.db import models
 
 
 class Category(BaseModel):
-    name = models.CharField(max_length=128, verbose_name="Name")
+    name = models.CharField(max_length=128, verbose_name="Name",  unique=True)
     description = models.TextField(blank=True, null=True)
 
     def __str__(self):
@@ -17,7 +17,7 @@ class Category(BaseModel):
 
 
 class Brand(BaseModel):
-    name = models.CharField(max_length=128, verbose_name="Name")
+    name = models.CharField(max_length=128, verbose_name="Name",  unique=True)
     description = models.TextField(blank=True, null=True)
 
     def __str__(self):
@@ -31,7 +31,7 @@ class Brand(BaseModel):
 
 
 class Product(BaseModel):
-    name = models.CharField(max_length=64, verbose_name="Name")
+    name = models.CharField(max_length=64, verbose_name="Name", unique=True)
     description = models.TextField(blank=True, null=True)
     price = models.DecimalField(decimal_places=2, max_digits=12)
     is_active = models.BooleanField(default=False)
