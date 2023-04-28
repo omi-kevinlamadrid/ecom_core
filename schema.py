@@ -15,8 +15,4 @@ class AllMutation(graphene.ObjectType):
     update_brand = UpdateBrand.Field()
     create_brand = CreateBrand.Field()
 
-
-
-
-
 schema = graphene.Schema(query=Query, mutation=AllMutation)

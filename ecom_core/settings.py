@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'base',
     'orders',
     'products',
+
+    'graphql_playground',
 ]
 
 GRAPHENE = {
